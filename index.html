@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <!-- Menghubungkan font Poppins dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Menghubungkan ikon Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+    <!-- Menghubungkan file CSS lokal -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>TodoList</h1> <!-- Judul halaman -->
+    </header>
+
+    <!-- Formulir untuk menambahkan Todo -->
+    <form action="">
+        <input type="text" class="todo-input"/> <!-- Input untuk menambahkan Todo -->
+        <button class="todo-button" type="submit"> <!-- Tombol untuk menambahkan Todo -->
+            <i class="fas fa-plus-square"></i> <!-- Ikon plus menggunakan Font Awesome -->
+        </button>
+
+        <!-- Dropdown untuk filter Todo -->
+        <div class="select">
+            <select name="todos" id="" class="filter-todo">
+                <option value="all">All</option> <!-- Opsi untuk menampilkan semua Todos -->
+                <option value="" class="completed">Completed</option> <!-- Opsi untuk menampilkan Todos yang sudah selesai -->
+                <option value="" class="uncompleted">Uncompleted</option> <!-- Opsi untuk menampilkan Todos yang belum selesai -->
+            </select>
+        </div>
+    </form>
+
+    <!-- Menghubungkan file JavaScript untuk menambahkan interaktivitas -->
+    <script src="./app.js"></script>
+</body>
+</html>

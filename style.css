@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts and Backg*/
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff; /* Warna latar belakang */
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Todo Form */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.todo-input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 30%;
+  transition: border-color 0.3s ease; /* Transisi untuk efek hover */
+}
+
+.todo-input:focus {
+  outline: none; /* Hilangkan outline saat input aktif */
+  border-color: #000701; /* Warna border saat input aktif */
+}
+
+.todo-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #ff00b3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+}
+
+.todo-button:hover {
+  background-color: #000f01; /* Warna latar saat tombol dihover */
+}
+
+.todo-button i {
+  margin-right: 0.10rem;
+}
+
+/* Select Dropdown completed/uncompleted */
+.select {
+  margin-top: 0rem;
+  margin-left: 1rem;
+  
+}
+
+.filter-todo {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Adjustments for options */
+.filter-todo option {
+  padding: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
