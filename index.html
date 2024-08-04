@@ -18,21 +18,35 @@
     </header>
 
     <!-- Formulir untuk menambahkan Todo -->
-    <form action="">
-        <input type="text" class="todo-input"/> <!-- Input untuk menambahkan Todo -->
-        <button class="todo-button" type="submit"> <!-- Tombol untuk menambahkan Todo -->
+    <form id="todo-form">
+        <input type="text" id="todo-input" class="todo-input" placeholder="Add a new todo"/> <!-- Input untuk menambahkan Todo -->
+        <button id="todo-button" class="todo-button" type="submit"> <!-- Tombol untuk menambahkan Todo -->
             <i class="fas fa-plus-square"></i> <!-- Ikon plus menggunakan Font Awesome -->
         </button>
 
         <!-- Dropdown untuk filter Todo -->
         <div class="select">
-            <select name="todos" id="" class="filter-todo">
+            <select name="todos" id="filter-todo" class="filter-todo">
                 <option value="all">All</option> <!-- Opsi untuk menampilkan semua Todos -->
-                <option value="" class="completed">Completed</option> <!-- Opsi untuk menampilkan Todos yang sudah selesai -->
-                <option value="" class="uncompleted">Uncompleted</option> <!-- Opsi untuk menampilkan Todos yang belum selesai -->
+                <option value="completed">Completed</option> <!-- Opsi untuk menampilkan Todos yang sudah selesai -->
+                <option value="uncompleted">Uncompleted</option> <!-- Opsi untuk menampilkan Todos yang belum selesai -->
             </select>
         </div>
     </form>
+
+    <!-- Tabel untuk menampilkan daftar Todo -->
+    <table id="todo-table">
+        <thead>
+            <tr>
+                <th>Todo</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Baris-baris Todo akan ditambahkan di sini melalui JavaScript -->
+        </tbody>
+    </table>
 
     <!-- Menghubungkan file JavaScript untuk menambahkan interaktivitas -->
     <script src="./app.js"></script>
