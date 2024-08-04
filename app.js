@@ -29,12 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const actionsCell = document.createElement('td');
         const completeButton = document.createElement('button');
         completeButton.textContent = 'Complete';
+
         completeButton.addEventListener('click', () => {
             if (statusCell.textContent === 'Uncompleted') {
                 statusCell.textContent = 'Completed';
                 statusCell.classList.add('completed');
+                completeButton.textContent = 'Uncompleted'; // Change button text to 'Uncompleted'
+            } else {
+                statusCell.textContent = 'Uncompleted';
+                statusCell.classList.remove('completed');
+                completeButton.textContent = 'Complete'; // Change button text to 'Complete'
             }
         });
+
         actionsCell.appendChild(completeButton);
 
         row.appendChild(todoCell);

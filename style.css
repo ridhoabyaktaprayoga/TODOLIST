@@ -1,3 +1,4 @@
+/* Universal styles */
 * {
   margin: 0;
   padding: 0;
@@ -60,10 +61,6 @@ form {
   background-color: #ff006a; /* Warna latar saat tombol dihover */
 }
 
-.todo-button i {
-  margin-right: 0.10rem;
-}
-
 /* Select Dropdown completed/uncompleted */
 .select {
   margin-top: 0rem;
@@ -87,12 +84,14 @@ form {
   width: 70%;
   margin: 2rem auto;
   border-collapse: collapse;
+  table-layout: fixed; /* Ensure the table layout is fixed to prevent stretching */
 }
 
 #todo-table th, #todo-table td {
   border: 1px solid #ddd;
   padding: 0.8rem;
   text-align: left;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 #todo-table th {
@@ -107,6 +106,10 @@ form {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  max-width: 100px; /* Set a maximum width for buttons */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #todo-table td button:hover {
@@ -125,7 +128,16 @@ form {
     align-items: stretch;
   }
 
+  .todo-input, .todo-button {
+    width: 100%; /* Make input and button take full width on smaller screens */
+    margin: 0.5rem 0;
+  }
+
   #todo-table {
     width: 100%;
+  }
+
+  #todo-table th, #todo-table td {
+    font-size: 0.9rem; /* Slightly smaller text on smaller screens */
   }
 }
