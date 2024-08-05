@@ -112,8 +112,20 @@ form {
   white-space: nowrap;
 }
 
-#todo-table td button:hover {
-  background-color: #ff006a;
+#todo-table td button.complete-btn {
+  background-color: #ff00b3; /* Color for complete button */
+}
+
+#todo-table td button.complete-btn:hover {
+  background-color: #ff006a; /* Hover color for complete button */
+}
+#todo-table td button.delete-btn {
+  background-color: #ff4d4d; /* Color for delete button */
+  margin-left: 0.5rem ;
+}
+
+#todo-table td button.delete-btn:hover {
+  background-color: #e60000; /* Hover color for delete button */
 }
 
 /* Strikethrough for completed todos */
@@ -126,7 +138,7 @@ form {
   form {
     flex-direction: column;
     align-items: stretch;
-  }
+  }s
 
   .todo-input, .todo-button {
     width: 100%; /* Make input and button take full width on smaller screens */
@@ -140,4 +152,20 @@ form {
   #todo-table th, #todo-table td {
     font-size: 0.9rem; /* Slightly smaller text on smaller screens */
   }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem; /* Space between table and footer */
+}
+
+footer p {
+  margin: 0;
 }
